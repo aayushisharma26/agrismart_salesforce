@@ -1,0 +1,95 @@
+/* contact */
+form {
+    display: block;
+
+}
+body{
+    background-image: url("pexels-pixabay-259280.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+  }
+  h3{
+      font-size: 60px;
+      background-color: azure;
+      width: 400px;
+      text-align: center;
+  }
+ p{
+     font-size: 35px;
+     background-color: azure;
+     width: 600px;
+     text-align: center;
+ } 
+
+
+ 
+  .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+  }
+   .cancelbtn{
+      color: #fff;
+      
+      cursor: pointer;
+      font-size: 20px;
+      width: 120px;
+      padding: 14px 18px;
+      background-color: #f44336;
+      
+      
+    } 
+/*   
+  .button:hover {
+    background-color: #555;
+  } */
+
+
+
+  #nav-bar{
+    position: sticky;
+    top: 0;
+    z-index: 40 ;
+
+}
+/* .collapse {
+    background-image: url("pexels-pixabay-259280.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+} */
+.navbar{
+    background-image: linear-gradient(to right,#fff);
+    text-align: center;
+    font-size: 25px;
+}
+.navbar-brand{
+  padding-left:20px;
+ 
+
+}
+.navbar-nav li{
+    padding: 0  10px ;
+}
+.navbar-nav li a{
+    color: rgb(7, 40, 100)!important;
+    font-weight:600;
+    float: right;
+    text-align: left;
+}
+.fa-bars{
+    color: #fff ;
+    font-size: 30px !important;
+   
+}
+.navbar-toggler{
+    outline: none !important;
+}

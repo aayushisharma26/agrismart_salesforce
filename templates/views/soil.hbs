@@ -1,0 +1,379 @@
+<head>
+    <title>Crop Testing</title>
+    <link rel="stylesheet" href="css/style1.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
+        .mySlides {display:none}
+        .w3-tag, .fa {cursor:pointer}
+        .w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
+    </style>
+    <style>
+        .table {
+            border: 1px solid black;
+        }
+    .table{
+        display:inline-table;
+    }
+
+    </style>
+    {{>headers}}
+</head>
+
+<body><br><br>
+    <form action="/soil" method="POST">
+        <center>
+            <table border="3" style="width: 60%; margin:10px; height:40px;">
+                <tbody>
+                    <tr style="">
+                        <img src="https://soilhealth.dac.gov.in/Content/Image/SoilHealthHeader.png">
+                        <br><br>
+
+                        <td>State : <span class="req">*</span></td>
+
+                        <td><select id="State_Code" name="State_Code" onchange="StateChange();">
+                                <option value="SelectState">Select State</option>
+                                <option value="Andra Pradesh">Andra Pradesh</option>
+                                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                <option value="Assam">Assam</option>
+                                <option value="Bihar">Bihar</option>
+                                <option value="Chhattisgarh">Chhattisgarh</option>
+                                <option value="Goa">Goa</option>
+                                <option value="Gujarat">Gujarat</option>
+                                <option value="Haryana">Haryana</option>
+                                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                <option value="Jharkhand">Jharkhand</option>
+                                <option value="Karnataka">Karnataka</option>
+                                <option value="Kerala">Kerala</option>
+                                <option value="Madya Pradesh">Madya Pradesh</option>
+                                <option value="Maharashtra">Maharashtra</option>
+                                <option value="Manipur">Manipur</option>
+                                <option value="Meghalaya">Meghalaya</option>
+                                <option value="Mizoram">Mizoram</option>
+                                <option value="Nagaland">Nagaland</option>
+                                <option value="Orissa">Orissa</option>
+                                <option value="Punjab">Punjab</option>
+                                <option value="Rajasthan">Rajasthan</option>
+                                <option value="Sikkim">Sikkim</option>
+                                <option value="Tamil Nadu">Tamil Nadu</option>
+                                <option value="Telangana">Telangana</option>
+                                <option value="Tripura">Tripura</option>
+                                <option value="Uttaranchal">Uttaranchal</option>
+                                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                <option value="West Bengal">West Bengal</option>
+                                <option disabled style="background-color:#aaa; color:#fff">UNION Territories</option>
+                                <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                <option value="Chandigarh">Chandigarh</option>
+                                <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                                <option value="Daman and Diu">Daman and Diu</option>
+                                <option value="Delhi">Delhi</option>
+                                <option value="Lakshadeep">Lakshadeep</option>
+                                <option value="Pondicherry">Pondicherry</option>
+                            </select>
+                        </td>
+                        <td>District : <span class="req">*</span></td>
+                        <td>
+                            <select id="District_CodeDDL" name="District_CodeDDL"
+                                onchange="DistrictChange(this.value);">
+                                <option value="">--SELECT--</option>
+                                <option value="70">Ambala</option>
+                                <option value="81">Bhiwani</option>
+                                <option value="1045">CHARKI DADRI</option>
+                                <option value="88">Faridabad</option>
+                                <option value="78">Fatehabad</option>
+                                <option value="86">Gurgaon</option>
+                                <option value="80">Hisar</option>
+                                <option value="83">Jhajjar</option>
+                                <option value="77">Jind</option>
+                                <option value="73">Kaithal</option>
+                                <option value="74">Karnal</option>
+                                <option value="72">Kurukshetra</option>
+                                <option value="84">Mahendragarh</option>
+                                <option value="87">Mewat</option>
+                                <option value="89">Palwal</option>
+                                <option value="69">Panchkula</option>
+                                <option value="75">Panipat</option>
+                                <option value="85">Rewari</option>
+                                <option value="82">Rohtak</option>
+                                <option value="79">Sirsa</option>
+                                <option value="76">Sonipat</option>
+                                <option value="71">Yamunanagar</option>
+                            </select>
+                        </td>
+                </tbody>
+            </table>
+
+
+
+
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+                integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+                crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+                integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+                crossorigin="anonymous"></script>
+
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+                integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+                crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+                integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+                crossorigin="anonymous"></script>
+
+            <!-- <tbody>
+            <tr style="background-color: #061d47;">
+                <td style="text-align:center; background-color: #061d47;">Test Result Value</td>
+            </tr>
+        </tbody> -->
+            <h1 style="text-align:center; background-color: #061d47;color: rgb(255, 255, 255);width:80%">Test Result
+                Value
+            </h1>
+
+        </center>
+        <center>
+            <table border="5" style="width:25%;height: 200px; margin:10px;">
+
+                <tbody>
+                    <tr>
+                        <td>Organic Carbon (OC) </td>
+                        <td><input class="TestValuetext" id="OC" name="oc" style="text-align: right;"
+                                onkeypress="return isFloatNumberKey(this, event);" type="text" value=""> %</td>
+
+                    </tr>
+                    <tr>
+                        <td>Available Nitrogen (N) </td>
+                        <td><input class="TestValuetext" id="N" name="n" style="text-align: right;"
+                                onkeypress="return isFloatNumberKey(this, event);" type="text" value=""> kg/ha</td>
+
+                    </tr>
+                    <tr>
+                        <td>Available Phosphorus (P) </td>
+                        <td><input class="TestValuetext" id="P" name="p" style="text-align: right;"
+                                onkeypress="return isFloatNumberKey(this, event);" type="text" value=""> kg/ha </td>
+                    </tr>
+                    <tr>
+                        <td>Available Potassium (K) </td>
+                        <td><input class="TestValuetext" id="K" name="k" style="text-align: right;"
+                                onkeypress="return isFloatNumberKey(this, event);" type="text" value=""> kg/ha</td>
+
+                    </tr>
+
+
+                    {{!-- <tr style="margin:20px;">
+                        <td colspan="2" style="text-align: center;margin:20px;">
+                            <input type="button" value="Continue" class="myButton" onclick="GetRating();">
+                        </td>
+                    </tr> --}}
+                </tbody>
+            </table>
+        </center>
+        <center>
+
+            <div id="Crop" style="margin:10px;">
+                <table style="width:60%;">
+                    <tbody>
+                        <tr>
+                            <td>Crop Group :</td>
+                            <td>
+
+                                <select id="Group_Code" name="Group_Code">
+                                    <option value="">--SELECT--</option>
+                                    <option value="BULB VEGETABLES">BULB VEGETABLES</option>
+                                    <option value="CEREALS">CEREALS</option>
+                                    <option value="FIBRE CROPS">FIBRE CROPS</option>
+                                    <option value="NARCOTICS(OTHER CROPS)">NARCOTICS(OTHER CROPS)</option>
+                                    <option value="OILSEEDS">OILSEEDS</option>
+                                    <option value="PULSES">PULSES</option>
+                                    <option value="SPICES AND CONDIMENTS">SPICES AND CONDIMENTS</option>
+                                    <option value="SUGAR CROPS">SUGAR CROPS</option>
+                                </select>
+
+                            </td>
+                            <td>Crop :</td>
+                            <td>
+
+
+                                <select id="Crop_Code" name="Crop_Code1" onchange="Variety(this.value);">
+                                    <option value="">--SELECT--</option>
+                                    <option value="Arhar (Tur)">Arhar (Tur)</option>
+                                    <option value="Bengal Grams(Gram)">Bengal Grams(Gram)</option>
+                                    <option value="Bhindi(Ladies Finger)">Bhindi(Ladies Finger)</option>
+                                    <option value="Bitter gourd">Bitter gourd</option>
+                                    <option value="Black Grams (Urd Beans)">Black Grams (Urd Beans)</option>
+                                    <option value="Bottle gourd">Bottle gourd</option>
+                                    <option value="Brinjal">Brinjal</option>
+                                    <option value="Cabbage">Cabbage</option>
+                                    <option value="Castor Seed">Castor Seed</option>
+                                    <option value="Cauliflower">Cauliflower</option>
+                                    <option value="Chilly Capsicum">Chilly Capsicum</option>
+                                    <option value="Cotton">Cotton</option>
+                                    <option value="Cowpea (Lobia)(Asparagus)">Cowpea (Lobia)(Asparagus)</option>
+                                    <option value="Cucumbar">Cucumbar</option>
+                                    <option value="French Beans (Frasbean)">French Beans (Frasbean)</option>
+                                    <option value="Garlic">Garlic</option>
+                                    <option value="Ginger">Ginger</option>
+                                    <option value="Green Grams (Moong)">Green Grams (Moong)</option>
+                                    <option value="Green Peas">Green Peas</option>
+                                    <option value="Groundnut">Groundnut</option>
+
+                                </select>
+
+
+                            </td>
+
+                            <td class="Variety_Codetd">Variety :</td>
+                            <td class="Variety_Codetd">
+
+
+                                <select id="Variety_Code" name="Variety_Code" onchange="GetDistinctValues(this.value);">
+                                    <option value="">--SELECT--</option>
+                                    <option value="All variety">All variety</option>
+
+                                </select>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td class="Season_Codetd">Season :</td>
+                            <td class="Season_Codetd">
+
+                                <select id="Season_Code" name="Season_Code" onchange="GetDistinctValues(this.value);">
+                                    <option value="">--SELECT--</option>
+                                    <option value="spring"> spring</option>
+                                    <option value="autumn">autumn</option>
+                                    <option value="winter">winter </option>
+                                    <option value="summer">summer</option>
+                                </select>
+
+                            </td>
+
+                            <td class="Soil_type_codetd"> Soil Type :</td>
+                            <td class="Soil_type_codetd">
+
+
+
+                                <select id="Soil_type_code" name="Soil_type_code"
+                                    onchange="GetDistinctValues(this.value);">
+                                    <option value="">--SELECT--</option>
+                                    <option value="Sandy soil">Sandy soil</option>
+                                    <option value="Silt Soil">Silt Soil</option>
+                                    <option value="Clay Soil">Clay Soil</option>
+                                    <option value="Loamy Soil">Loamy Soil</option>
+                                </select>
+
+
+
+
+
+                            </td>
+
+
+                        </tr>
+                        <tr>
+                            <td class="Irrigation_Codetd">Irrigation :</td>
+                            <td class="Irrigation_Codetd"><select id="Irrigation_Code" name="Irrigation_Code"
+                                    onchange="GetDistinctValues(this.value);">
+                                    <option value="">--SELECT--</option>
+                                    <option value="Micro-irrigation">Micro-irrigation</option>
+                                    <option value="Drip irrigation">Drip irrigation</option>
+                                    <option value="Sprinkler irrigation">Sprinkler irrigation</option>
+                                    <option value="Center pivot">Center pivot</option>
+                                </select> </td>
+
+                        </tr><br><br>
+
+                        <tr>
+                            <td colspan="6" align="center">
+
+                                
+                                   
+                                <a href="/home">
+                                {{!-- <input type="submit" id="AddCrop" value="Calculate" class="myButton" type="button" value="Calculate" class="btn" onclick='javascript:myfunction(); '/> --}}
+
+                                    <button type="submit" class="signupbtn"
+                                        style="width: 100px; ;background-color: #6ac404; height:50px;text-align:center ;color:#fff;font-size:larger">Submit
+                                        </button>
+
+                                </a>
+                                <a href="/home">
+                                    <button type="button" class="cancelbtn"
+                                        style="width: 100px; ;background-color: #f44336;height:50px;text-align:center;color:#fff;font-size:larger">Cancel</button>
+                                </a>
+
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+<script> function setVisible(){
+    if (showResult==true){
+        document.getElementById("display")
+    }
+    else{
+        console.log ("error")
+    }
+    }
+     </script>
+
+
+
+                {{!-- <div>
+                    Resuult: {{showResult}} 
+                </div> --}}
+               
+                    <button type="submit" onclick="setVisible()"></button>
+                     <div id="display" ></div>
+                    <table  class="table" id="display" border="5"
+                        style="width:50%;height: 100px; margin:10px;"> 
+
+                        <tbody>
+                            <th colspan="5" style="background: #07204e; color:rgb(255, 255, 255)" class="Bold">
+                                Fertilizer Combination1 <span class="GFR_Unit_Name"></span> </th>
+                            <tr>
+                                <td>Neem Coated Urea</td>
+                                <td>363.04 Kg/Ha</td>
+
+                            </tr>
+                            <tr>
+                                <td>Single Superphosphate (16%P2O5 Granulated)</td>
+                                <td> 250 Kg/Ha</td>
+
+                            </tr>
+                            <tr>
+                                <td>Potassium Chloride (Muriate of Potash) </td>
+                                <td>390.00 kg/ha </td>
+                            </tr>
+                            <tr>
+                                <td>Single Superphosphate(16% P205 Powdered) </td>
+                                <td> 390 Kg/Ha</td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+
+</body>

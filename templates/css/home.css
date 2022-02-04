@@ -1,0 +1,106 @@
+  
+/* home     */
+body{
+    text-align: center;
+    font-family: sans-serif;
+    background-image: url("../img/pexels-pixabay-259280.jpg");
+    /* background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; */
+}
+.heading {
+    color: rgb(13, 26, 53);
+    margin-top: 5%;
+    margin-left: auto;
+    text-align: center;
+    text-shadow: 50%;
+    font-size: 100px;
+    font-weight: 300;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    ;
+}
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+/* 
+body {
+ background: #111;
+ font-family: "Open Sans",  Impact;
+} */
+
+.area {
+  text-align: center;
+  font-size: 3em;
+  color: rgb(6, 29, 73);
+  letter-spacing: -1px;
+  font-weight: 20;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+  text-transform: uppercase;
+  animation: blur .95s ease-out infinite;
+  /* text-shadow: 0px 0px 5px #fff, 0px 0px 7px #fff; */
+}
+
+@keyframes blur {
+  from {
+    text-shadow:0px 0px 10px rgb(131, 179, 19),
+      0px 0px 10px rgb(51, 102, 9), 
+      0px 0px 25px rgb(109, 216, 8),
+      0px 0px 25px rgb(25, 85, 7),
+      0px 0px 25px rgb(138, 255, 5),
+      0px 0px 25px rgb(112, 231, 32),
+      0px 0px 25px rgb(79, 245, 14),
+      0px 0px 25px rgb(83, 223, 3),
+      0px 0px 50px #fff,
+      0px 0px 50px #fff,
+      0px 0px 50px #d7e60d,
+      0px 0px 150px #cee40d,
+      0px 10px 100px #68ad0d,
+      0px 10px 100px #b3e209,
+      0px 10px 100px #bff00d,
+      0px 10px 100px #4be205,
+      0px -10px 100px #619410,
+      0px -10px 100px #0fd3ec;
+  }
+}
+
+
+
+#nav-bar{
+    position: sticky;
+    top: 0;
+    z-index: 40 ;
+
+}
+/* .collapse {
+    background-image: url("pexels-pixabay-259280.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+} */
+.navbar{
+    background-image: linear-gradient(to right,#fff);
+    text-align: center;
+    font-size: 25px;
+}
+.navbar-brand{
+  padding-left:20px;
+ 
+
+}
+.navbar-nav li{
+    padding: 0  10px ;
+}
+.navbar-nav li a{
+    color: rgb(7, 40, 100)!important;
+    font-weight:600;
+    float: right;
+    text-align: left;
+}
+.fa-bars{
+    color: #fff ;
+    font-size: 30px !important;
+   
+}
+.navbar-toggler{
+    outline: none !important;
+}

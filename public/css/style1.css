@@ -1,0 +1,200 @@
+/* index */
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body{
+    text-align: center;
+    font-family: sans-serif;
+    background-image: url("https://wallpapercave.com/colorful-nature-wallpapers");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#nav-bar{
+    position: sticky;
+    top: 0;
+    z-index: 40 ;
+
+}
+/* .collapse {
+    background-image: url("pexels-pixabay-259280.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+} */
+.navbar{
+    background-image: linear-gradient(to right,#fff);
+    text-align: center;
+    font-size: 25px;
+}
+.navbar-brand{
+  padding-left:20px;
+ 
+
+}
+.navbar-nav li{
+    padding: 0  10px ;
+}
+.navbar-nav li a{
+    color: rgb(7, 40, 100)!important;
+    font-weight:600;
+    float: right;
+    text-align: left;
+}
+.fa-bars{
+    color: #fff ;
+    font-size: 30px !important;
+   
+}
+.navbar-toggler{
+    outline: none !important;
+}
+#banner{
+    /* background-image: linear-gradient(to right,#5d8a0a,#95e205); */
+    /* color:transparent; */
+    background-image: "/home/sagarika/Desktop/Hakethon/mernbackend/templates/views/pexels-pixabay-259280.jpg";
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding-top: 0%;
+    width: 1500px;
+    text-align: center;
+}
+.promo-title{
+    font-size: 50px;
+    font-weight: 600;
+    width: 1600px;
+  /* padding-left: ; */
+    position:absolute;
+    padding-top:0%;
+    color: rgb(7, 40, 100); 
+}
+.promo{
+    font-size: 35px
+    /* width: 1200px; */
+    
+    /* padding-top:1%; */
+
+    
+}    
+  
+.container1{
+    height: 50px;
+    width: 1500px;
+    border: transparent;
+    display: flex;
+    margin-left: 250px;
+    margin-top: 20px;
+
+    
+} 
+.item{
+    width: 1600px;
+    background-color: rgb(245, 245, 245);
+    border: 2px solid rgb(237, 252, 25);
+    margin: 1%;
+    padding: 2px;
+    text-align: center;
+    height: 620px;
+    border-radius: 10%;
+}
+.items{
+    width: 600px;
+    background-color:transparent;
+    /* border: 2px solid rgb(237, 252, 25); */
+    margin: 1%;
+    padding: 2px;
+    text-align: center;
+    height: 550px;
+    border-radius: 10%;}
+
+.m-booked-bl-simple-week-vertical-47337{
+    padding-bottom:20px;
+}    
+
+.center {
+    /* margin: 15; */
+    position: absolute;
+    left: 50%;
+    height: 40px;
+    width: 200px;
+    font-size: large;
+    border-radius: 10px;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: rgb(200, 241, 241);
+}
+.texts{
+    
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: left;
+    /* font-size: 5px;
+    font-weight: 6px; */
+}
+.texx{
+    font-size: 19px;
+    padding-top: 3%;
+    padding-left: 5%;
+    padding-right: 7%;
+    /* align-items: center; */
+
+}
+.texxx{
+    font-size: 14px;
+    padding-top: 3%;
+    padding-left: 5%;
+    padding-right: 7%;
+    /* align-items: center; */
+
+}
+.texxxx{
+    font-size: 14px;
+    padding-top: 3%;
+    padding-left: 5%;
+    padding-right: 7%;
+    /* align-items: center; */
+
+}
+.centr {
+    margin: 15px;
+    align-items: center;
+    /* padding-left: 5%; */
+    /* position: absolute; */
+    /* left: 90%; */
+    height: 50px;
+    width: 150px;
+    font-size: large;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    /* -ms-transform: translate(-60%, -60%); */
+    transform: translate(40%, -2%); 
+    background-color: rgb(15, 14, 70);
+}
+.img{
+    /* align-items: center; */
+    margin-left: 18px;
+    padding-top: 1%;
+    border-radius: 30px;
+    width: 350px;
+    height: 250px;
+}
+
+.d-flex{
+    margin-left: 2%;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* about */
